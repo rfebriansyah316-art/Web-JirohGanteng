@@ -1,40 +1,1188 @@
-<html>
-    <head>
-        <title>WEB JIROH</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="container"> 
-        <!-- NAVIGATION BAR -->
-        <div class="container-navbar">
-            <ul class="ul-navbar">
-            <li class="li-navbar">
-                <a href="#" class="a-navbar">HOME</a>
-            </li>
-            <li class="li-navbar">
-                <a href="about.html" class="a-navbar">ABOUT ME</a>
-            </li>
-            <li class="li-navbar">
-                <a href="contact.html" class="a-navbar">CONTACT ME</a>
-            </li>
-            </ul>
-        </div>
-        <!-- NAVIGATION BAR SELESAI -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- CONTENT 1 -->
-        <div class="container-content">
-            <a href="https://youtube.com/@jirohzzz?si=ATceWP-A4eXssOjY" class="a-content">
-                <img src="yt-removebg-preview.png" class="img-content" />
-                <p>MAMPIR KE YOUTUBE GUA WOE!!</p>
-            </a>
-        </div>
-        <!-- CONTENT 1 END -->
+    <title>Afdal Malik Parts</title>
 
-        <!-- FOOTER -->
-        <div class="container-footer">
-            <h1 class="h1-footer">WEB JIROH GANTENG😎</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #171717;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 75px;
+            background: #0b0b0b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #e50914;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #e50914;
+        }
+
+        .cart {
+            background: #e50914;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 600px;
+            background:
+                linear-gradient(135deg, #080808 0%, #1c1c1c 55%, #e50914 55%, #a80009 100%);
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e50914;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #e50914;
+        }
+
+        .hero p {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-red {
+            display: inline-block;
+            background: #e50914;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn-red:hover {
+            background: white;
+            color: #e50914;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* MOTOR VISUAL */
+
+        .hero-bike {
+            position: absolute;
+            right: 8%;
+            font-size: 180px;
+            transform: rotate(-5deg);
+            filter: drop-shadow(0 15px 15px rgba(0,0,0,.5));
+        }
+
+        /* ================= SEARCH ================= */
+
+        .search-area {
+            background: white;
+            padding: 30px 8%;
+            box-shadow: 0 3px 15px rgba(0,0,0,.08);
+        }
+
+        .search-box {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            background: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 16px;
+            font-size: 15px;
+            background: transparent;
+        }
+
+        .search-box button {
+            border: none;
+            background: #e50914;
+            color: white;
+            padding: 0 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title small {
+            color: #e50914;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            margin-top: 8px;
+        }
+
+        /* ================= KATEGORI ================= */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            transition: .3s;
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+            border-color: #e50914;
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .category-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .category h3 {
+            margin-bottom: 8px;
+        }
+
+        .category p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* ================= PRODUK ================= */
+
+        .products {
+            background: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.12);
+            border-color: #e50914;
+        }
+
+        /* VISUAL PRODUK */
+        .product-image {
+            height: 210px;
+            background: linear-gradient(135deg, #151515, #333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: "";
+            width: 150px;
+            height: 150px;
+            background: #e50914;
+            border-radius: 50%;
+            position: absolute;
+            opacity: .12;
+        }
+
+        .product-icon {
+            font-size: 85px;
+            z-index: 2;
+            filter: drop-shadow(0 8px 5px rgba(0,0,0,.6));
+        }
+
+        .discount {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #e50914;
+            color: white;
+            padding: 6px 9px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info small {
+            color: #888;
+            font-weight: bold;
+        }
+
+        .product-info h3 {
+            margin: 8px 0 12px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 900;
+            color: #e50914;
+        }
+
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .buy-button {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            background: #111;
+            color: white;
+            padding: 11px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background: #e50914;
+        }
+
+        /* ================= PROMO ================= */
+
+        .promo {
+            background: #0b0b0b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 55px 8%;
+        }
+
+        .promo h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .promo p {
+            color: #aaa;
+        }
+
+        /* ================= TENTANG ================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-card {
+            min-height: 350px;
+            border-radius: 15px;
+            background:
+                linear-gradient(135deg, #111, #2c2c2c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 150px;
+            box-shadow: 0 15px 35px rgba(0,0,0,.2);
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 span {
+            color: #e50914;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            margin-top: 20px;
+        }
+
+        .info-list div {
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        /* ================= KONTAK ================= */
+
+        .contact {
+            background: #e50914;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            margin: 8px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: white;
+            color: #e50914;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #080808;
+            color: #888;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer strong {
+            color: #e50914;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .product-grid,
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-bike {
+                display: none;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                height: auto;
+                padding: 18px 5%;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .menu {
+                width: 100%;
+                justify-content: center;
+                gap: 12px;
+                order: 3;
+            }
+
+            .menu a {
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 40px 6%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .product-grid,
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .promo {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .about-card {
+                min-height: 250px;
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            AFDAL <span>MALIK PARTS</span>
         </div>
-        <!-- FOOTER END -->
-         </div>
-    </body>
+
+        <ul class="menu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#kategori">KATEGORI</a></li>
+            <li><a href="#produk">PRODUK</a></li>
+            <li><a href="#tentang">TENTANG</a></li>
+            <li><a href="#kontak">KONTAK</a></li>
+        </ul>
+
+        <div class="cart">
+            🛒 0
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                SPAREPART MOTOR
+            </div>
+
+            <h1>
+                AFDAL<br>
+                <span>MALIK</span> PARTS
+            </h1>
+
+            <p>
+                Pusat sparepart dan aksesoris motor.
+                Cari part motor yang kamu butuhkan
+                dengan mudah dan cepat.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#produk" class="btn-red">
+                    BELANJA SEKARANG
+                </a>
+
+                <a href="#kategori" class="btn-outline">
+                    LIHAT KATEGORI
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-bike">
+            🏍️
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari sparepart... contoh: oli, busi, kampas rem"
+            >
+
+            <button onclick="searchProduct()">
+                CARI
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= KATEGORI ================= -->
+
+    <section id="kategori">
+
+        <div class="section-title">
+
+            <small>KATEGORI</small>
+
+            <h2>Pilih Sparepart</h2>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category">
+
+                <div class="category-icon">
+                    ⚙️
+                </div>
+
+                <h3>Mesin</h3>
+
+                <p>
+                    Oli, busi, filter dan part mesin
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🛑
+                </div>
+
+                <h3>Sistem Rem</h3>
+
+                <p>
+                    Kampas rem dan komponen pengereman
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    ⚡
+                </div>
+
+                <h3>Kelistrikan</h3>
+
+                <p>
+                    Lampu, aki dan komponen listrik
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <div class="category-icon">
+                    🔧
+                </div>
+
+                <h3>Aksesoris</h3>
+
+                <p>
+                    Spion, handle dan aksesoris
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUK ================= -->
+
+    <section class="products" id="produk">
+
+        <div class="section-title">
+
+            <small>PRODUK PILIHAN</small>
+
+            <h2>Sparepart Terlaris</h2>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+
+            <!-- OLI -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -15%
+                    </span>
+
+                    <div class="product-icon">
+                        🛢️
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>MESIN</small>
+
+                    <h3>Oli Mesin Motor</h3>
+
+                    <span class="price">
+                        Rp65.000
+                    </span>
+
+                    <span class="old-price">
+                        Rp76.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- KAMPAS REM -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -10%
+                    </span>
+
+                    <div class="product-icon">
+                        🛑
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>SISTEM REM</small>
+
+                    <h3>Kampas Rem Depan</h3>
+
+                    <span class="price">
+                        Rp85.000
+                    </span>
+
+                    <span class="old-price">
+                        Rp95.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSI -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <div class="product-icon">
+                        🔥
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>MESIN</small>
+
+                    <h3>Busi Motor</h3>
+
+                    <span class="price">
+                        Rp35.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RANTAI -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -12%
+                    </span>
+
+                    <div class="product-icon">
+                        ⛓️
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>DRIVETRAIN</small>
+
+                    <h3>Rantai Motor</h3>
+
+                    <span class="price">
+                        Rp180.000
+                    </span>
+
+                    <span class="old-price">
+                        Rp205.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GEAR -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <div class="product-icon">
+                        ⚙️
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>DRIVETRAIN</small>
+
+                    <h3>Gear Set Motor</h3>
+
+                    <span class="price">
+                        Rp250.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPION -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -8%
+                    </span>
+
+                    <div class="product-icon">
+                        🪞
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>AKSESORIS</small>
+
+                    <h3>Spion Motor Sport</h3>
+
+                    <span class="price">
+                        Rp120.000
+                    </span>
+
+                    <span class="old-price">
+                        Rp130.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <div class="product-icon">
+                        🧰
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>MESIN</small>
+
+                    <h3>Filter Udara</h3>
+
+                    <span class="price">
+                        Rp75.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HANDLE -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        HOT
+                    </span>
+
+                    <div class="product-icon">
+                        🔩
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <small>AKSESORIS</small>
+
+                    <h3>Handlebar Motor</h3>
+
+                    <span class="price">
+                        Rp150.000
+                    </span>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/6281221699320"
+                    >
+                        BELI VIA WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROMO ================= -->
+
+    <section class="promo">
+
+        <div>
+
+            <h2>🔥 PROMO SPAREPART</h2>
+
+            <p>
+                Harga spesial untuk beberapa part pilihan.
+            </p>
+
+        </div>
+
+        <a href="#produk" class="btn-red">
+            LIHAT PRODUK
+        </a>
+
+    </section>
+
+
+    <!-- ================= TENTANG ================= -->
+
+    <section class="about" id="tentang">
+
+        <div class="about-card">
+            🏍️
+        </div>
+
+
+        <div class="about-text">
+
+            <h2>
+                AFDAL MALIK <span>PARTS</span>
+            </h2>
+
+            <p>
+                Afdal Malik Parts adalah toko yang menyediakan
+                berbagai kebutuhan sparepart dan aksesoris motor.
+            </p>
+
+            <p>
+                Kami menyediakan berbagai part untuk kebutuhan
+                perawatan motor, penggantian komponen,
+                maupun modifikasi.
+            </p>
+
+            <div class="info-list">
+
+                <div>✓ Sparepart motor</div>
+
+                <div>✓ Aksesoris motor</div>
+
+                <div>✓ Harga bersaing</div>
+
+                <div>✓ Melayani pembelian langsung</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <section class="contact" id="kontak">
+
+        <h2>
+            BUTUH SPAREPART?
+        </h2>
+
+        <p>
+            Hubungi Afdal Malik Parts  ya lekku
+        </p>
+
+        <p>
+            📍 Jalan Perjuangan RT 005 RW 003
+        </p>
+
+        <p>
+            📱 WhatsApp: 0812-2169-9320
+        </p>
+
+        <a
+            href="https://wa.me/6281221699320"
+            class="contact-btn"
+        >
+            CHAT WHATSAPP
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <strong>Afdal Malik Parts</strong>
+            — Sparepart Motor
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function searchProduct() {
+
+            let input =
+                document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let products =
+                document.querySelectorAll(".product");
+
+            products.forEach(function(product) {
+
+                let name =
+                    product
+                    .querySelector("h3")
+                    .innerText
+                    .toLowerCase();
+
+                if (name.includes(input)) {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
 </html>
+```
